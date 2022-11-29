@@ -33,4 +33,6 @@ class ComparadorPorTamanho implements Comparator<String>{
     public int compare(String s1, String s2) {
         return 0;
     }
+
+    //Testando para fazer o merge
 }
