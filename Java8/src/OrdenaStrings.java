@@ -11,11 +11,12 @@ public class OrdenaStrings {
 
         List<String> palavras = new ArrayList<String>();
         palavras.add("alura online");
-        palavras.add("editora cada do código");
+        palavras.add("editora casa do código");
         palavras.add("caelum");
 
+        Comparator<String> comparador = new ComparadorPorTamanho();
         //sai na ordem alfabética - LEXCOGRÁFICA DO A até Z
-        Collections.sort(palavras);
+        Collections.sort(palavras, comparador);
         System.out.println(palavras);
 
         //Ao rodar o resultado sai: [alura online, caelum, editora cada do código],
@@ -33,4 +34,8 @@ class ComparadorPorTamanho implements Comparator<String>{
     public int compare(String s1, String s2) {
         return 0;
     }
+
+    //Agora sai na ordem [alura online, editora cada do código, caelum]
+
+
 }
